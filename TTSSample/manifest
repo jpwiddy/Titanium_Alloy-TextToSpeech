@@ -1,0 +1,9 @@
+#appname:TTSSample
+#appid:com.jakewidmer.TTSSample
+#type:mobile
+#guid:fffb156c-6977-4576-bb4a-0b296a350685
+#version:1.0
+#publisher:jakewidmer
+#url:http://
+#image:appicon.png
+#desc:Sample project using Google Translate's TTS

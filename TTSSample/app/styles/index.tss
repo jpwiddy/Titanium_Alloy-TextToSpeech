@@ -1,0 +1,67 @@
+".container": {
+},
+"#content":{
+	layout : "vertical",
+	backgroundColor:"#d9c09e",
+	width : Ti.UI.FILL,
+	height : Ti.UI.FILL
+},
+"Button":{
+	width : Ti.UI.FILL,
+	height : "38dp",
+	right : "12dp",
+	left : "12dp",
+	borderRadius : "8dp",
+	borderColor : "transparent",
+	bottom : "8dp",
+	color : "white"
+},
+"#label": {
+	top : "10dp",
+	bottom : "18dp",
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "white",
+	text : "This app showcases the ability to use Google Translate's TTS"
+},
+"#define":{
+	title : "Define",
+	backgroundColor : "#67bdc3"
+},
+"#scenic":{
+	title : "Scenic Area",
+	backgroundColor : "#67c39c"
+},
+"#trex":{
+	title : "T-Rex",
+	backgroundColor : "#c36f67"
+},
+"#anything":{
+	title : "Anything",
+	backgroundColor : "#6f67c3"
+},
+"#wrapper":{
+	layout : "horizontal",
+	width : Ti.UI.FILL,
+	height : "38dp",
+	right : "12dp",
+	left : "12dp",
+	bottom : "8dp"
+},
+"#textField":{
+	top : "0dp",
+	borderRadius : "8dp",
+	borderColor : "#808080",
+	height : "38dp",
+	width : "65%",
+	backgroundColor : "white",
+	color : "#555555",
+	hintText : "Enter text here",
+	paddingLeft : "4dp",
+},
+"#speak":{
+	right : "0dp",
+	width : "30%",
+	title : "Speak",
+	backgroundColor : "#ffa500"
+}

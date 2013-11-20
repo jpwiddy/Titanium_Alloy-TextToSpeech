@@ -1,0 +1,15 @@
+<Alloy>
+	<Window class="container">
+		<View id="content">
+			<Label id="label"/>
+			<Button id="define"/>
+			<Button id="scenic"/>
+			<Button id="trex"/>
+			<Button id="anything"/>
+			<View id="wrapper">
+				<TextField id="textField"/>
+				<Button id="speak"/>
+			</View>
+		</View>
+	</Window>
+</Alloy>
