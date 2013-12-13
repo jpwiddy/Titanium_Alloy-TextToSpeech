@@ -3,6 +3,7 @@ var scenic = "There's a scenic area up ahead";
 var trex = "On the left is the T-Rex, from the upper Cretaceous Period";
 var anything = "Any text up to 100 characters for TTS";
 var input = "";
+var flag = false;
 
 //
 var doDictate = function(string) {
@@ -26,19 +27,42 @@ var doDictate = function(string) {
     };
 };
 
+var animateBar = function(){
+    if(flag){
+        var anim = Ti.UI.createAnimation({
+            width : "4.5%",
+            duration: 400
+        });
+        flag = false;
+    }
+    else{
+        var anim = Ti.UI.createAnimation({
+            width : "75%",
+            duration: 400
+        });
+        flag = true;
+    }
+    $.progressLine.animate(anim);
+};
+
 $.define.addEventListener("click",function(e) {
 	doDictate(define);
+    animateBar();
 });
 $.scenic.addEventListener("click",function(e) {
 	doDictate(scenic);
+    animateBar();
 });
 $.trex.addEventListener("click",function(e) {
 	doDictate(trex);
+    animateBar();
 });
 $.anything.addEventListener("click",function(e) {
 	doDictate(anything);
+    animateBar();
 });
 $.speak.addEventListener("click",function(e) {
+    animateBar();
 	if($.textField.getValue() == null || $.textField.getValue() == ""){
 		alert("Text field was empty. Please enter text to be spoken");
 	}else

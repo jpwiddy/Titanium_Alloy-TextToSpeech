@@ -64,4 +64,19 @@
 	width : "30%",
 	title : "Speak",
 	backgroundColor : "#ffa500"
+},
+"#progressBar":{
+	height : "15dp",
+	left : "12dp",
+	right : "12dp",
+	width : Ti.UI.FILL,
+	borderColor : "#808080",
+    backgroundColor: "#FFFFFF",
+    borderRadius : "7dp"
+},
+"#progressLine":{
+	left : "0dp",
+	width : "4.5%",
+	backgroundColor : "#ffa500",
+	borderRadius : "7dp"
 }

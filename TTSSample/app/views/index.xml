@@ -10,6 +10,11 @@
 				<TextField id="textField"/>
 				<Button id="speak"/>
 			</View>
+
+			<View id="progressBar">
+				<View id="progressLine"/>
+			</View>
+
 		</View>
 	</Window>
 </Alloy>

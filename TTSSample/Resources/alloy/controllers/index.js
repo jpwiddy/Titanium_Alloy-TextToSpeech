@@ -121,12 +121,32 @@ function Controller() {
         id: "speak"
     });
     $.__views.wrapper.add($.__views.speak);
+    $.__views.progressBar = Ti.UI.createView({
+        height: "15dp",
+        left: "12dp",
+        right: "12dp",
+        width: Ti.UI.FILL,
+        borderColor: "#808080",
+        backgroundColor: "#FFFFFF",
+        borderRadius: "7dp",
+        id: "progressBar"
+    });
+    $.__views.content.add($.__views.progressBar);
+    $.__views.progressLine = Ti.UI.createView({
+        left: "0dp",
+        width: "4.5%",
+        backgroundColor: "#ffa500",
+        borderRadius: "7dp",
+        id: "progressLine"
+    });
+    $.__views.progressBar.add($.__views.progressLine);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var define = "Speak - to utter words or articulate sounds with ordinary speech modulation";
     var scenic = "There's a scenic area up ahead";
     var trex = "On the left is the T-Rex, from the upper Cretaceous Period";
     var anything = "Any text up to 100 characters for TTS";
+    var flag = false;
     var doDictate = function(string) {
         var name = string;
         var googleUrl = "http://translate.google.com/translate_tts?tl=en&q=" + name;
@@ -144,19 +164,40 @@ function Controller() {
             player.play();
         };
     };
+    var animateBar = function() {
+        if (flag) {
+            var anim = Ti.UI.createAnimation({
+                width: "4.5%",
+                duration: 400
+            });
+            flag = false;
+        } else {
+            var anim = Ti.UI.createAnimation({
+                width: "75%",
+                duration: 400
+            });
+            flag = true;
+        }
+        $.progressLine.animate(anim);
+    };
     $.define.addEventListener("click", function() {
         doDictate(define);
+        animateBar();
     });
     $.scenic.addEventListener("click", function() {
         doDictate(scenic);
+        animateBar();
     });
     $.trex.addEventListener("click", function() {
         doDictate(trex);
+        animateBar();
     });
     $.anything.addEventListener("click", function() {
         doDictate(anything);
+        animateBar();
     });
     $.speak.addEventListener("click", function() {
+        animateBar();
         null == $.textField.getValue() || "" == $.textField.getValue() ? alert("Text field was empty. Please enter text to be spoken") : doDictate($.textField.getValue());
         $.textField.setValue("");
     });
