@@ -14,7 +14,10 @@
 			<View id="progressBar">
 				<View id="progressLine"/>
 			</View>
-
+			<View id="loadingWrapper">
+				<Label id="loadingLabel"/>
+				<ImageView id="loading"/>
+			</View>
 		</View>
 	</Window>
 </Alloy>

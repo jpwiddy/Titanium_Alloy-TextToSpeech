@@ -79,4 +79,34 @@
 	width : "4.5%",
 	backgroundColor : "#ffa500",
 	borderRadius : "7dp"
+},
+"#loadingWrapper":{
+	top : "10dp",
+	width : Ti.UI.FILL,
+	height : "38dp",
+	right : "12dp",
+	left : "12dp",
+	borderRadius : "8dp",
+	borderColor : "transparent",
+	backgroundColor : "#999"
+},
+"#loadingLabel":{
+	text : "Loading",
+	font:{
+		fontSize : "18dp"
+	},
+	left : "20dp",
+	color : "white"
+},
+"#loading":{
+	right : "20dp",
+	height : "80dp",
+	width : "80dp",
+	images: [
+		"/images/more0.png",
+		"/images/more1.png",
+		"/images/more2.png",
+		"/images/more3.png",
+		"/images/more4.png"
+	]
 }

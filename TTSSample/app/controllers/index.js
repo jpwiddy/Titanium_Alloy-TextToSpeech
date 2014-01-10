@@ -69,5 +69,6 @@ $.speak.addEventListener("click",function(e) {
 		doDictate($.textField.getValue());
 		$.textField.setValue("");
 });
-
+$.loading.duration = 200;
+$.loading.start();
 $.index.open();
